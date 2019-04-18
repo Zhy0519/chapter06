@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Spring-4.3.18.RELEASE" type="spring">
+    <properties version="4.3.18.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/mybatis-3.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.46.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

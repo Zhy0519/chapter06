@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.dao.Dao">
+    <select id="fCById" parameterType="integer"
+            resultType="com.itheima.po.Customer">
+            select * from customer where id = #{id}
+    </select>
+
+    <select id="fCByName" parameterType="String"
+            resultType="com.itheima.po.Customer">
+            select * from customer where username like '%${value}%'
+    </select>
+
+    <insert id="addC" parameterType="com.itheima.po.Customer">
+            insert into customer(username,jobs,phone)
+            values (#{username},#{jobs},#{phone})
+    </insert>
+
+    <update id="upC" parameterType="com.itheima.po.Customer">
+        update  customer set username=#{username},jobs=#{jobs},phone=#{phone} where id=#{id}
+    </update>
+
+    <delete id="deC" parameterType="integer">
+        delete from customer where id=#{id}
+    </delete>
+</mapper>
